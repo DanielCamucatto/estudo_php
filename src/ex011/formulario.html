@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario simples</h1>
+    <p>
+        Vamos criar dois arquivos para simular esse processo.
+
+        Crie um arquivo chamado formulario.html com um formulário que tenha:
+
+        Um campo de texto para o nome, com o name nome_usuario.
+
+        Um campo de texto para a idade, com o name idade_usuario.
+
+        O formulário deve enviar os dados para um arquivo chamado receber_dados.php usando o método POST.
+
+        Crie o arquivo receber_dados.php que fará o seguinte:
+
+        Receba os valores do formulário usando o array $_POST.
+
+        Armazene o nome e a idade em variáveis.
+
+        Exiba uma mensagem na tela, como: "Olá, [nome do usuário]! Você tem [idade] anos.".
+
+        Como você faria esses dois arquivos para que o sistema funcione?
+    </p>
+    <main>
+        <form action="receber_dados.php" method="post">
+            <label for="nome_usuario">Nome:</label>
+            <input type="text" id="nome_usuario" name="nome_usuario" required>
+            <br>
+            <label for="idade_usuario">Idade:</label>
+            <input type="number" id="idade_usuario" name="idade_usuario" required>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+
+</html>
