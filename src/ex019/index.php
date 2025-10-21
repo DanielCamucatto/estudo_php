@@ -12,6 +12,17 @@ Dica: Você vai precisar do array_sum() (para somar) e do count() (para saber qu
  */
 function calcularMediaVariadica(...$notas): float
 {
+    if (count($notas) === 0) {
+        return 0.0;
+    }
+
+    $somaTotal = array_sum($notas);
+    $quantidade = count($notas);
+    $media = $somaTotal / $quantidade;
+
+    return $media;
+}
+{
     // SEU CÓDIGO VAI AQUI
     
     // 1. Verifique se o array está vazio para evitar divisão por zero.
